@@ -33,6 +33,17 @@ with(subr, points(as.POSIXlt(subr$DateTime), subr$Sub_metering_1, type="l", col 
 with(subr, points(as.POSIXlt(subr$DateTime), subr$Sub_metering_2, type="l", col = "blue"))
 with(subr, points(as.POSIXlt(subr$DateTime), subr$Sub_metering_3, type="l", col = "red"))
 
+legend(x = "topright",  
+       bty = "n",
+       y.intersp = 1, 
+       c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),   
+       lty=c(1, 1, 1),   
+       lwd=c(2.5, 2.5, 2.5),  
+       col=c("black", "red", "blue"),  
+       pt.cex=0.75,  
+       cex=0.5,
+)
+
 ## creates 3rd plot
 plot(as.POSIXlt(subr$DateTime), subr$Voltage, 
      type = "l", 
